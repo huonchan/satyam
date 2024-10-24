@@ -1,8 +1,8 @@
 # satyam
 サティアン
 
-#使用ツール
+# 使用ツール
 
-##タブアイコン作成
+## タブアイコン作成
 
 https://www.favicon-generator.org/
