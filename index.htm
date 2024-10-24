@@ -14,10 +14,17 @@
         margin: 0 auto;
     }
 
-    #content {
-        width: 500px;
-        margin: 0 auto;
+    #kari
+    {
+        text-align: center;
     }
+
+    #content {
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
 
     #top_image {
         max-width: 500px;
@@ -41,114 +48,341 @@
 
     <div>
 
+        <!--
         <div id="header">
             <div>俺はお前が俺を見たのを見たぞ</div>
         </div>
+        -->
 
         <div id="content">
 
-            <!-- このへんネタ-->
-            <marquee>ようこそ！プリンセスおひめさまのホームページへ！　　　　　　　　なんで来たのお前？ｗ</marquee>
+            <div id="kari">
+                <!-- このへんネタ-->
+                <marquee>ようこそ！プリンセスおひめさまのホームページへ！　　　　　　　　なんで来たのお前？ｗ</marquee>
 
-            <div id="dummy_counter"></div>
+                <div id="dummy_counter"></div>
 
-            <a href="#" onclick="change_top_image()">
-                <img id="top_image" src="./images/top/0.jpg" title="何が気になるんだ？">
-            </a>
+                <a href="#" onclick="change_top_image()">
+                    <img id="top_image" src="./images/top/0.jpg" title="何が気になるんだ？">
+                </a>
 
-            <div>TOP画提供：城ヶ崎姫子 様</div>
+                <div>TOP画提供：城ヶ崎姫子 様</div>
 
-            <!-- このへんまでネタ-->
+                <div>
 
-            <div id="enquete"></div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/X4ZmU3j2rFA?si=eoRYBCW_zYii_UAP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-            <div id="time_table_area">
-
-                <table id="time_table">
-                    <tr class="timeline">
-                        <td class="time even">0</td>
-                        <td class="time odd">1</td>
-                        <td class="time even">2</td>
-                        <td class="time odd">3</td>
-                        <td class="time even">4</td>
-                        <td class="time odd">5</td>
-                        <td class="time even">6</td>
-                        <td class="time odd">7</td>
-                        <td class="time even">8</td>
-                        <td class="time odd">9</td>
-                        <td class="time even">10</td>
-                        <td class="time odd">11</td>
-
-                        <td class="time even">12</td>
-                        <td class="time odd">13</td>
-                        <td class="time even">14</td>
-                        <td class="time odd">15</td>
-                        <td class="time even">16</td>
-                        <td class="time odd">17</td>
-                        <td class="time even">18</td>
-                        <td class="time odd">19</td>
-                        <td class="time even">20</td>
-                        <td class="time odd">21</td>
-                        <td class="time even">22</td>
-                        <td class="time odd">23</td>
-                    </tr>
-
-
-                    <tr class="task_line">
-                        <td colspan="24"> クイズ </td>
-                    </tr>
-                    <tr class="task_link">
-                        <td class="morning" colspan="8"> <a href="" , target="_blank">Ponta</a> </td>
-                        <td class="noon" colspan="8"> <a href="" , target="_blank">Ponta</a> </td>
-                        <td class="evening" colspan="8"> <a href="" , target="_blank">Ponta</a> </td>
-                    </tr>
-                    <tr class="task_link">
-                        <td class="morning" colspan="8"> <a href="" , target="_blank">ドットマネー</a> </td>
-                        <td class="noon" colspan="8"> <a href="" , target="_blank">ドットマネー</a> </td>
-                        <td class="evening" colspan="8"> <a href="" , target="_blank">ドットマネー</a> </td>
-                    </tr>
-                    <tr class="task_link">
-                        <td class="morning" colspan="8"> <a href="" , target="_blank">モッピー</a> </td>
-                        <td class="noon" colspan="8"> <a href="" , target="_blank">モッピー</a> </td>
-                        <td class="evening" colspan="8"> <a href="" , target="_blank">モッピー</a> </td>
-                    </tr>
-                    <tr class="task_link">
-                        <td class="morning" colspan="8"> <a href="" , target="_blank">楽天</a> </td>
-                        <td class="noon" colspan="8"> <a href="" , target="_blank">楽天</a> </td>
-                        <td class="evening" colspan="8"> <a href="" , target="_blank">楽天</a> </td>
-                    </tr>
-                    <tr class>
-                        <td class="span_2h_2"> <a href="" , target="_blank"></a> </td>
-                        <td class="span_2h_1" colspan="12"> <a href="" , target="_blank">リサーチパネル</a> </td>
-                        <td class="span_2h_2" colspan="11"> <a href="" , target="_blank">リサーチパネル</a> </td>
-                    </tr>
-                    <tr class>
-                        <td colspan="2"> <a href="" , target="_blank"></a> </td>
-                        <td colspan="22"> <a href="" , target="_blank">モッピーガチャ</a> </td>
-                    </tr>
-
-                </table><!-- content -->
+                </div>
 
             </div>
 
+            <!-- このへんまでネタ-->
 
-            <div id="bank">
-                <ul>
-                    <li>
-                        銀行:
-                        <a href="https://d-money.jp/" target="_blank">ドットマネー</a>
-                        /
-                        <a href="https://pex.jp/" target="_blank">PeX</a>
-                    </li>
-                </ul>
+            <div id="poi_katsu_area">
+
+                <div id="enquete"></div>
+
+                <div id="time_table_area">
+
+                    <table id="time_table">
+                        <tr class="timeline">
+                            <td class="time even">0</td>
+                            <td class="time odd">1</td>
+                            <td class="time even">2</td>
+                            <td class="time odd">3</td>
+                            <td class="time even">4</td>
+                            <td class="time odd">5</td>
+                            <td class="time even">6</td>
+                            <td class="time odd">7</td>
+                            <td class="time even">8</td>
+                            <td class="time odd">9</td>
+                            <td class="time even">10</td>
+                            <td class="time odd">11</td>
+
+                            <td class="time even">12</td>
+                            <td class="time odd">13</td>
+                            <td class="time even">14</td>
+                            <td class="time odd">15</td>
+                            <td class="time even">16</td>
+                            <td class="time odd">17</td>
+                            <td class="time even">18</td>
+                            <td class="time odd">19</td>
+                            <td class="time even">20</td>
+                            <td class="time odd">21</td>
+                            <td class="time even">22</td>
+                            <td class="time odd">23</td>
+                        </tr>
+
+
+                        <tr class="task_line">
+                            <td colspan="24"> クイズ </td>
+                        </tr>
+                        <tr class="task_link">
+                            <td class="morning" colspan="8"> <a href="" , target="_blank">Ponta</a> </td>
+                            <td class="noon" colspan="8"> <a href="" , target="_blank">Ponta</a> </td>
+                            <td class="evening" colspan="8"> <a href="" , target="_blank">Ponta</a> </td>
+                        </tr>
+                        <tr class="task_link">
+                            <td class="morning" colspan="8"> <a href="" , target="_blank">ドットマネー</a> </td>
+                            <td class="noon" colspan="8"> <a href="" , target="_blank">ドットマネー</a> </td>
+                            <td class="evening" colspan="8"> <a href="" , target="_blank">ドットマネー</a> </td>
+                        </tr>
+                        <tr class="task_link">
+                            <td class="morning" colspan="8"> <a href="" , target="_blank">モッピー</a> </td>
+                            <td class="noon" colspan="8"> <a href="" , target="_blank">モッピー</a> </td>
+                            <td class="evening" colspan="8"> <a href="" , target="_blank">モッピー</a> </td>
+                        </tr>
+                        <tr class="task_link">
+                            <td class="morning" colspan="8"> <a href="" , target="_blank">楽天</a> </td>
+                            <td class="noon" colspan="8"> <a href="" , target="_blank">楽天</a> </td>
+                            <td class="evening" colspan="8"> <a href="" , target="_blank">楽天</a> </td>
+                        </tr>
+                        <tr class>
+                            <td class="span_2h_2"> <a href="" , target="_blank"></a> </td>
+                            <td class="span_2h_1" colspan="12"> <a href="" , target="_blank">リサーチパネル</a> </td>
+                            <td class="span_2h_2" colspan="11"> <a href="" , target="_blank">リサーチパネル</a> </td>
+                        </tr>
+                        <tr class>
+                            <td colspan="2"> <a href="" , target="_blank"></a> </td>
+                            <td colspan="22"> <a href="" , target="_blank">モッピーガチャ</a> </td>
+                        </tr>
+
+                    </table><!-- content -->
+
+                </div>
+
+                <div id="bank">
+                    <ul>
+                        <li>
+                            銀行:
+                            <a href="https://d-money.jp/" target="_blank">ドットマネー</a>
+                            /
+                            <a href="https://pex.jp/" target="_blank">PeX</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="rakuten_point_mall_area">
+                    <div class="task_line">楽天ポイントモール</div>
+                    <table id="rakuten_point_mall_table">
+                        <tr class="timeline">
+                            <td class="time even">0</td>
+                            <td class="time odd">1</td>
+                            <td class="time even">2</td>
+                            <td class="time odd">3</td>
+                            <td class="time even">4</td>
+                            <td class="time odd">5</td>
+                            <td class="time even">6</td>
+                            <td class="time odd">7</td>
+                            <td class="time even">8</td>
+                            <td class="time odd">9</td>
+                            <td class="time even">10</td>
+                            <td class="time odd">11</td>
+
+                            <td class="time even">12</td>
+                            <td class="time odd">13</td>
+                            <td class="time even">14</td>
+                            <td class="time odd">15</td>
+                            <td class="time even">16</td>
+                            <td class="time odd">17</td>
+                            <td class="time even">18</td>
+                            <td class="time odd">19</td>
+                            <td class="time even">20</td>
+                            <td class="time odd">21</td>
+                            <td class="time even">22</td>
+                            <td class="time odd">23</td>
+                        </tr>
+
+                        <tr class="task_line">
+                            <td class="task_title" colspan="24">未分類</td>
+                        </tr>
+
+                        <tr class="task_line">
+                            <td class="task_link all_day" colspan="24"><a href="https://pointmall.rakuten.co.jp/omikuji"
+                                    target="_blank">おみくじ</a></td>
+                        </tr>
+
+                        <tr class="task_line">
+                            <td class="task_title" colspan="24">基本ゲーム</td>
+                        </tr>
+
+                        <tr class="task_line">
+                            <td class="task_link all_day" colspan="24"><a href="https://pointmall.rakuten.co.jp/gacha"
+                                    target="_blank">ガチャ</a></td>
+                        </tr>
+
+                        <tr class="task_line">
+                            <td class="task_link all_day" colspan="24"><a href="https://pointmall.rakuten.co.jp/scratch"
+                                    target="_blank">スクラッチ</a></td>
+                        </tr>
+
+                        <tr class="task_line">
+                            <td class="task_link all_day" colspan="24"><a href="https://pointmall.rakuten.co.jp/janken"
+                                    target="_blank">じゃんけん</a></td>
+                        </tr>
+
+
+                        <tr class="task_line">
+                            <td class="task_link all_day" colspan="24"><a href="" target="_blank">ビンゴ</a></td>
+                        </tr>
+
+                        <tr class="task_line">
+                            <td class="task_link span_2h_1" colspan="2"><a href="https://rakuten.wamgame.jp/whack/top"
+                                    target="_blank">もぐら</a></td>
+                            <td class="task_link span_2h_2" colspan="2"><a href="https://rakuten.wamgame.jp/whack/top"
+                                    target="_blank">もぐら</a></td>
+                            <td class="task_link span_2h_1" colspan="2"><a href="https://rakuten.wamgame.jp/whack/top"
+                                    target="_blank">もぐら</a></td>
+                            <td class="task_link span_2h_2" colspan="2"><a href="https://rakuten.wamgame.jp/whack/top"
+                                    target="_blank">もぐら</a></td>
+                            <td class="task_link span_2h_1" colspan="2"><a href="https://rakuten.wamgame.jp/whack/top"
+                                    target="_blank">もぐら</a></td>
+                            <td class="task_link span_2h_2" colspan="2"><a href="https://rakuten.wamgame.jp/whack/top"
+                                    target="_blank">もぐら</a></td>
+                            <td class="task_link span_2h_1" colspan="2"><a href="https://rakuten.wamgame.jp/whack/top"
+                                    target="_blank">もぐら</a></td>
+                            <td class="task_link span_2h_2" colspan="2"><a href="https://rakuten.wamgame.jp/whack/top"
+                                    target="_blank">もぐら</a></td>
+                            <td class="task_link span_2h_1" colspan="2"><a href="https://rakuten.wamgame.jp/whack/top"
+                                    target="_blank">もぐら</a></td>
+                            <td class="task_link span_2h_2" colspan="2"><a href="https://rakuten.wamgame.jp/whack/top"
+                                    target="_blank">もぐら</a></td>
+                            <td class="task_link span_2h_1" colspan="2"><a href="https://rakuten.wamgame.jp/whack/top"
+                                    target="_blank">もぐら</a></td>
+                            <td class="task_link span_2h_2" colspan="2"><a href="https://rakuten.wamgame.jp/whack/top"
+                                    target="_blank">もぐら</a></td>
+
+
+                        <tr class="task_line">
+                            <td class="task_link span_2h_1" colspan="2"><a
+                                    href="https://rakuten.dropgame.jp/drop/play/top" target="_blank">貝集め</a></td>
+                            <td class="task_link span_2h_2" colspan="2"><a
+                                    href="https://rakuten.dropgame.jp/drop/play/top" target="_blank">貝集め</a></td>
+                            <td class="task_link span_2h_1" colspan="2"><a
+                                    href="https://rakuten.dropgame.jp/drop/play/top" target="_blank">貝集め</a></td>
+                            <td class="task_link span_2h_2" colspan="2"><a
+                                    href="https://rakuten.dropgame.jp/drop/play/top" target="_blank">貝集め</a></td>
+                            <td class="task_link span_2h_1" colspan="2"><a
+                                    href="https://rakuten.dropgame.jp/drop/play/top" target="_blank">貝集め</a></td>
+                            <td class="task_link span_2h_2" colspan="2"><a
+                                    href="https://rakuten.dropgame.jp/drop/play/top" target="_blank">貝集め</a></td>
+                            <td class="task_link span_2h_1" colspan="2"><a
+                                    href="https://rakuten.dropgame.jp/drop/play/top" target="_blank">貝集め</a></td>
+                            <td class="task_link span_2h_2" colspan="2"><a
+                                    href="https://rakuten.dropgame.jp/drop/play/top" target="_blank">貝集め</a></td>
+                            <td class="task_link span_2h_1" colspan="2"><a
+                                    href="https://rakuten.dropgame.jp/drop/play/top" target="_blank">貝集め</a></td>
+                            <td class="task_link span_2h_2" colspan="2"><a
+                                    href="https://rakuten.dropgame.jp/drop/play/top" target="_blank">貝集め</a></td>
+                            <td class="task_link span_2h_1" colspan="2"><a
+                                    href="https://rakuten.dropgame.jp/drop/play/top" target="_blank">貝集め</a></td>
+                            <td class="task_link span_2h_2" colspan="2"><a
+                                    href="https://rakuten.dropgame.jp/drop/play/top" target="_blank">貝集め</a></td>
+                        </tr>
+
+                        <tr class="task_line">
+                            <td class="task_link am" colspan="12"><a href="https://toripop.placehub.co/top0"
+                                    target="_blank">海底神殿(午前)</a></td>
+                            <td class="task_link pm" colspan="12"><a href="https://toripop.placehub.co/top0"
+                                    target="_blank">海底神殿(午後)</a></td>
+                        </tr>
+
+                        <tr class="task_line">
+                            <td class="task_link morning" colspan="8"><a
+                                    href="https://pointmall.rakuten.co.jp/game/quiz" target="_blank">クイズ(朝)</a></td>
+                            <td class="task_link noon" colspan="8"><a href="https://pointmall.rakuten.co.jp/game/quiz"
+                                    target="_blank">クイズ(昼)</a></td>
+                            <td class="task_link evening" colspan="8"><a
+                                    href="https://pointmall.rakuten.co.jp/game/quiz" target="_blank">クイズ(夜)</a></td>
+                        </tr>
+
+                        <tr class="task_line">
+                            <td class="task_link all_day" colspan="24"><a
+                                    href="https://general.game.pointmall.rakuten.net/sugoroku?media_id=106"
+                                    target="_blank">たびろく</a>
+                            </td>
+                        </tr>
+
+                        <tr class="task_line">
+                            <td class="task_link all_day" colspan="24"><a
+                                    href="https://general.game.pointmall.rakuten.net/puzzle?media_id=106"
+                                    target="_blank">3matchパズル</a>
+                            </td>
+                        </tr>
+
+                        <tr class="task_line">
+                            <td class="task_title" colspan="24">遺跡すごろく</td>
+                        </tr>
+
+                        <tr class="task_line">
+                            <td class="task_link am" colspan="12"><a href="https://rakuten.gamefactory.jp/game"
+                                    target="_blank">遺跡すごろく(午前)</a></td>
+                            <td class="task_link pm" colspan="12"><a href="https://rakuten.gamefactory.jp/game"
+                                    target="_blank">遺跡すごろく(午後)</a></td>
+                        </tr>
+
+                        <tr class="task_line">
+                            <td class="task_title" colspan="24">
+                                <a href="https://rakuten.gamefactory.jp/ssp" target="_blank">
+                                    遺跡探検用ジュエル集めゲーム一覧</a>
+                        </tr>
+
+                        <tr class="task_line">
+                            <td class="task_link invalid" colspan="2">死</td>
+                            <td class="task_link morning" colspan="6">
+                                <a href="http://st01.bridalgown.work/numbers/entry.php" target="_blank">
+                                    NunbersDX(朝)
+                                </a>
+                            </td>
+                            <td class="task_link noon" colspan="8">
+                                <a href="http://st01.bridalgown.work/numbers/entry.php" target="_blank">
+                                    NunbersDX(昼)
+                                </a>
+                            </td>
+                            <td class="task_link evening" colspan="8">
+                                <a href="http://st01.bridalgown.work/numbers/entry.php" target="_blank">
+                                    NunbersDX(夜)
+                                </a>
+                            </td>
+                        </tr>
+
+                        <tr class="task_line">
+                            <td class="task_link all_day" colspan="24">
+                                <a href="http://st02.flowerarrangement.work/silhouette/game.php?scd=a0a768fe2be80bdc8f398f525a93168e&x=235&y=26"
+                                    target="_blank"
+                                    title="遊ぶまでの遷移がクソだるいのでプレイ終わったらショートカットコマンドでタブを閉じろ（例:Braveならctrl + W)">
+                                    シルエット当て
+                                </a>
+                            </td>
+                        </tr>
+
+                        <tr class="task_line">
+                            <td class="task_link all_day" colspan="24">
+                                <a href="http://st04.bridalgown.work/tower/game.php?scd=7beb6b8f3ebb2673c85685dcfb675d10&x=229&y=40"
+                                    target="_blank"
+                                    title="遊ぶまでの遷移がクソだるいのでプレイ終わったらショートカットコマンドでタブを閉じろ（例:Braveならctrl + W)">
+                                    タワー上り
+                                </a>
+                            </td>
+                        </tr>
+
+                        <tr class="task_line">
+                            <td class="task_link all_day" colspan="24">
+                                <a href="http://st05.weddinghall.work/sushi/game.php?scd=bf53b9ffe0d601652a5e2a1ba77df5a2&x=142&y=66"
+                                    target="_blank"
+                                    title="遊ぶまでの遷移がクソだるいのでプレイ終わったらショートカットコマンドでタブを閉じろ（例:Braveならctrl + W)">
+                                    寿司
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
 
         </div>
 
 
-
         <div id="fotter"></div>
-
 
         <script src="js/injector.js"></script>
 
