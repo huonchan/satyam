@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>第1サティアン</title>
+    <link rel="stylesheet" href="css/timeshift.css">
+    <link rel="icon" href="images/icon/favicon-32x32.png" type="image/x-icon">
+</head>
+
+<style>
+    #content {
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    .enquete_line {
+        display: flex;
+    }
+</style>
+
+<body>
+
+    <div>
+        <div id="content">
+            <div id="enquete"></div>
+        </div>
+
+        <script>
+            function inject_enquete() {
+                var pri_high = ``;
+                {
+                    const m = new Map();
+                    m.set("マクロミル", "https://monitor.macromill.com/");
+                    m.set("楽天インサイト", "https://member.insight.rakuten.co.jp/survey/all/");
+                    m.set("ポケアン", "https://www.ann-kate.jp/monitor/");
+                    m.set("キューモニター", "https://www.cue-monitor.jp/");
+                    m.forEach((value, key) => {
+                        pri_high += `<a href="${value}" target="_brank"> ${key}</a> /`;
+                    });
+                }
+                var pri_mid = ``;
+                {
+                    const m = new Map();
+                    m.set("ドットマネー", "https://d-money.jp/survey");
+                    m.set("リサーチパネル", "https://research-panel.jp/");
+                    m.set("Uvoice", "https://monitor.u-voice.net/");
+                    m.set("Pontaリサーチ", "https://www.research.ponta.jp/mypage/");
+                    m.set("アイリサーチ", "https://monitor.i-research.jp/mypage/");
+                    m.set("サイバーパネル", "https://www.cyberpanel.jp/mypage");
+                    m.forEach((value, key) => {
+                        pri_mid += `<a href="${value}" target="_brank"> ${key}</a> /`;
+                    });
+                }
+                var pri_low = ``;
+                {
+                    const m = new Map();
+                    m.set("Toruna", "https://www.toluna.com/ja/");
+                    m.set("isay", "https://www.ipsosisay.com/ja-jp/surveys");
+                    m.set("モッピー", "https://pc.moppy.jp/research/");
+                    m.forEach((value, key) => {
+                        pri_low += `<a href="${value}" target="_brank"> ${key}</a> /`;
+                    });
+                }
+
+                const html =
+                    `<div>
+                    <div class="task_line">アンケート</div>
+                        <div class="enquete_line">
+                            <div>高:</div><div>${pri_high}</div>
+                        </div>
+                        <div class="enquete_line">
+                            <div>中:</div><div>${pri_mid}</div>
+                        </div>
+                        <div class="enquete_line">
+                            <div>下:</div><div>${pri_low}</div>
+                        </div>
+                    </div>
+                `;
+                document.getElementById('enquete').innerHTML = html;
+
+            }
+
+            inject_enquete();
+        </script>
+    </div>
+</body>
+
+</html>
