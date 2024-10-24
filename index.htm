@@ -3,30 +3,305 @@
 
 <head>
     <title>第1サティアン</title>
+    <link rel="stylesheet" href="css/timeshift.css">
 </head>
+
+<style>
+
+    #header {
+        display: flex;
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    #content {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    #top_image {
+        max-width: 500px;
+        max-height: 300px;
+    }
+
+    .task_line {
+        text-align: center;
+    }
+
+    .task_link {
+        text-align: center;
+    }
+
+    .enquete_line {
+        display: flex;
+    }
+</style>
 
 <body>
 
-    <h1>ナワバリ</h1>
+    <div>
 
-    <div id="text-content"></div>
+        <div id="header">
+            <div>俺はお前が俺を見たのを見たぞ</div>
+        </div>
+
+        <div id="content">
+
+            <!-- このへんネタ-->
+            <marquee>ようこそ！プリンセスおひめさまのホームページへ！　　　　　　　　なんで来たのお前？ｗ</marquee>
+
+            <div id="dummy_counter"></div>
+
+            <a href="#" onclick="change_top_image()">
+                <img id="top_image" src="./images/top/0.jpg" title="何が気になるんだ？">
+            </a>
+
+            <div>TOP画提供：城ヶ崎姫子 様</div>
+
+            <!-- このへんまでネタ-->
+
+            <div id="enquete"></div>
+
+            <div id="time_table_area">
+
+                <table id="time_table">
+                    <tr class="timeline">
+                        <td class="time even">0</td>
+                        <td class="time odd">1</td>
+                        <td class="time even">2</td>
+                        <td class="time odd">3</td>
+                        <td class="time even">4</td>
+                        <td class="time odd">5</td>
+                        <td class="time even">6</td>
+                        <td class="time odd">7</td>
+                        <td class="time even">8</td>
+                        <td class="time odd">9</td>
+                        <td class="time even">10</td>
+                        <td class="time odd">11</td>
+
+                        <td class="time even">12</td>
+                        <td class="time odd">13</td>
+                        <td class="time even">14</td>
+                        <td class="time odd">15</td>
+                        <td class="time even">16</td>
+                        <td class="time odd">17</td>
+                        <td class="time even">18</td>
+                        <td class="time odd">19</td>
+                        <td class="time even">20</td>
+                        <td class="time odd">21</td>
+                        <td class="time even">22</td>
+                        <td class="time odd">23</td>
+                    </tr>
 
 
+                    <tr class="task_line">
+                        <td colspan="24"> クイズ </td>
+                    </tr>
+                    <tr class="task_link">
+                        <td class="morning" colspan="8"> <a href="" , target="_blank">Ponta</a> </td>
+                        <td class="noon" colspan="8"> <a href="" , target="_blank">Ponta</a> </td>
+                        <td class="evening" colspan="8"> <a href="" , target="_blank">Ponta</a> </td>
+                    </tr>
+                    <tr class="task_link">
+                        <td class="morning" colspan="8"> <a href="" , target="_blank">ドットマネー</a> </td>
+                        <td class="noon" colspan="8"> <a href="" , target="_blank">ドットマネー</a> </td>
+                        <td class="evening" colspan="8"> <a href="" , target="_blank">ドットマネー</a> </td>
+                    </tr>
+                    <tr class="task_link">
+                        <td class="morning" colspan="8"> <a href="" , target="_blank">モッピー</a> </td>
+                        <td class="noon" colspan="8"> <a href="" , target="_blank">モッピー</a> </td>
+                        <td class="evening" colspan="8"> <a href="" , target="_blank">モッピー</a> </td>
+                    </tr>
+                    <tr class="task_link">
+                        <td class="morning" colspan="8"> <a href="" , target="_blank">楽天</a> </td>
+                        <td class="noon" colspan="8"> <a href="" , target="_blank">楽天</a> </td>
+                        <td class="evening" colspan="8"> <a href="" , target="_blank">楽天</a> </td>
+                    </tr>
+                    <tr class>
+                        <td class="span_2h_2"> <a href="" , target="_blank"></a> </td>
+                        <td class="span_2h_1" colspan="12"> <a href="" , target="_blank">リサーチパネル</a> </td>
+                        <td class="span_2h_2" colspan="11"> <a href="" , target="_blank">リサーチパネル</a> </td>
+                    </tr>
+                    <tr class>
+                        <td colspan="2"> <a href="" , target="_blank"></a> </td>
+                        <td colspan="22"> <a href="" , target="_blank">モッピーガチャ</a> </td>
+                    </tr>
 
-    <script>
-        document.getElementById('text-content').textContent  = "error";
-        fetch('data.txt')
-            .then(response => response.text())
-            .then(text => {
-                document.getElementById('text-content').textContent = text;
-            })
-            .catch(
+                </table><!-- content -->
 
-                error => console.error('ファイルの読み込みエラー:', error)
-                
-            );
-    </script>
+            </div>
 
+        </div>
+
+        <div id="bank">
+            <ul>
+                <li>
+                    銀行:
+                    <a href="https://d-money.jp/" target="_blank">ドットマネー</a>
+                    /
+                    <a href="https://pex.jp/" target="_blank">PeX</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <div id="fotter"></div>
+
+
+        <script src="js/injector.js"></script>
+
+        <script>
+
+
+            function change_top_image() {
+                const array = [
+                    '0.jpg', '1.jpg', '2.jpg', '3.jpg', '4.jpg'];
+                const rIdx = Math.floor(Math.random() * array.length);
+                document.getElementById("top_image").src = `./images/top/${array[rIdx]}`;
+            }
+
+            function dummy_counter() {
+                const randomNumber = Math.floor(Math.random() * 10000);
+
+                // 下2桁が00ならキリ番
+                if (randomNumber % 100 === 0) {
+                    document.getElementById('dummy_counter').innerText = "キリ番ゲット！ " + randomNumber + "ふみ逃げ禁止　掲示板に報告お願いします";
+                } else {
+                    // キリ番じゃない場合は、適当なメッセージを表示
+                    const messages = [
+                        "残念！キリ番ではありませんでした…",
+                        "もう少しでキリ番！",
+                        "また挑戦してね！",
+                    ];
+                    const randomIndex = Math.floor(Math.random() * messages.length);
+                    document.getElementById('dummy_counter').innerText = "あなたは" + randomNumber + "人目のお客様です";
+                }
+            }
+
+            function inject_enquete() {
+                var pri_high = ``;
+                {
+                    const m = new Map();
+                    m.set("マクロミル", "https://monitor.macromill.com/");
+                    m.set("楽天インサイト", "https://member.insight.rakuten.co.jp/survey/all/");
+                    m.set("ポケアン", "https://www.ann-kate.jp/monitor/");
+                    m.set("キューモニター", "https://www.cue-monitor.jp/");
+                    m.forEach((value, key) => {
+                        pri_high += `<a href="${value}" target="_brank"> ${key}</a> /`;
+                    });
+                }
+                var pri_mid = ``;
+                {
+                    const m = new Map();
+                    m.set("ドットマネー", "https://d-money.jp/survey");
+                    m.set("リサーチパネル", "https://research-panel.jp/");
+                    m.set("Uvoice", "https://monitor.u-voice.net/");
+                    m.set("Pontaリサーチ", "https://www.research.ponta.jp/mypage/");
+                    m.set("アイリサーチ", "https://monitor.i-research.jp/mypage/");
+                    m.set("サイバーパネル", "https://www.cyberpanel.jp/mypage");
+                    m.forEach((value, key) => {
+                        pri_mid += `<a href="${value}" target="_brank"> ${key}</a> /`;
+                    });
+                }
+                var pri_low = ``;
+                {
+                    const m = new Map();
+                    m.set("Toruna", "https://www.toluna.com/ja/");
+                    m.set("isay", "https://www.ipsosisay.com/ja-jp/surveys");
+                    m.set("モッピー", "https://pc.moppy.jp/research/");
+                    m.forEach((value, key) => {
+                        pri_low += `<a href="${value}" target="_brank"> ${key}</a> /`;
+                    });
+                }
+
+                const html =
+                    `<div>
+                    <div class="task_line">アンケート</div>
+                        <div class="enquete_line">
+                            <div>高:</div><div>${pri_high}</div>
+                        </div>
+                        <div class="enquete_line">
+                            <div>中:</div><div>${pri_mid}</div>
+                        </div>
+                        <div class="enquete_line">
+                            <div>下:</div><div>${pri_low}</div>
+                        </div>
+                    </div>
+                `;
+                document.getElementById('enquete').innerHTML = html;
+
+            }
+
+            function inject_enquete_omit() {
+                var pri_high = ``;
+                {
+                    const m = new Map();
+                    m.set("マクロミル", "https://monitor.macromill.com/");
+                    m.set("楽天インサイト", "https://member.insight.rakuten.co.jp/survey/all/");
+                    m.set("ポケアン", "https://www.ann-kate.jp/monitor/");
+                    m.set("キューモニター", "https://www.cue-monitor.jp/");
+                    m.forEach((value, key) => {
+                        pri_high += `<a href="${value}" target="_brank"> ${key}</a> /`;
+                    });
+                }
+                var pri_mid = ``;
+                {
+                    const m = new Map();
+                    m.set("ドットマネー", "https://d-money.jp/survey");
+                    m.set("リサーチパネル", "https://research-panel.jp/");
+                    m.set("Uvoice", "https://monitor.u-voice.net/");
+                    m.set("Pontaリサーチ", "https://www.research.ponta.jp/mypage/");
+                    m.set("アイリサーチ", "https://monitor.i-research.jp/mypage/");
+                    m.set("サイバーパネル", "https://www.cyberpanel.jp/mypage");
+                    m.forEach((value, key) => {
+                        pri_mid += `<a href="${value}" target="_brank"> ${key}</a> /`;
+                    });
+                }
+                var pri_low = ``;
+                {
+                    const m = new Map();
+                    m.set("Toruna", "https://www.toluna.com/ja/");
+                    m.set("isay", "https://www.ipsosisay.com/ja-jp/surveys");
+                    m.set("モッピー", "https://pc.moppy.jp/research/");
+                    m.forEach((value, key) => {
+                        pri_low += `<a href="${value}" target="_brank"> ${key}</a> /`;
+                    });
+                }
+
+                const html =
+                    `<ul>
+                    <li>アンケート
+                        <ul>
+                            <li>
+                                高:${pri_high}
+                            </li>
+                        </ul>
+                    
+                        <ul>
+                            <li>
+                                中:${pri_mid}
+                            </li>
+                        </ul>
+                        
+                        <ul>
+                            <li>
+                                下:${pri_low}
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            `;
+                document.getElementById('enquete').innerHTML = html;
+
+            }
+            dummy_counter();
+            inject_enquete();
+
+        </script>
+
+    </div>
 </body>
+
+
 
 </html>

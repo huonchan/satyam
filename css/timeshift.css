@@ -1,0 +1,56 @@
+
+.time {
+    width: 24px;
+    text-align: center;
+}
+
+/** 時間ごと背景色 */
+
+.invalid {
+    background-color: black;
+    color: red;
+}
+
+.even {
+    background-color: palegreen;
+}
+
+.odd {
+    background-color: khaki;
+}
+
+.span_2h_1 {
+    background-color: palegreen;
+}
+
+.span_2h_2 {
+    background-color: khaki;
+}
+
+.am {
+    background-color: steelblue;
+}
+
+.pm {
+    background-color: sandybrown;
+}
+
+.all_day {
+    background-color: skyblue;
+}
+
+.morning {
+    background-color: mediumvioletred;
+}
+
+.noon {
+    background-color: wheat;
+}
+
+.evening {
+    background-color: mediumpurple;
+}
+
+.evening {
+    background-color: mediumblue;
+}
