@@ -49,6 +49,13 @@
     }
 </style>
 
+<script>
+
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+</script>
+
 <body>
 
     <div>
@@ -73,6 +80,7 @@
 
                 <div>TOP画提供：城ヶ崎姫子 様</div>
 
+                <!--
                 <div>
 
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/X4ZmU3j2rFA?si=eoRYBCW_zYii_UAP"
@@ -82,27 +90,132 @@
 
                 </div>
 
+                -->
+
+                <div id="log"> log...</div>
+
             </div>
 
             <!-- このへんまでネタ-->
 
-            <div id="poi_katsu_area">
+            <div id="work_area">
 
-                <iframe src="p_life_enquete.htm" width="600" height="150"></iframe>
-
-                <iframe src="p_life_quiz.htm" width="600" height="300"></iframe>
-
-                <div id="bank">
-
-                    銀行:
-                    <a href="https://d-money.jp/" target="_blank">ドットマネー</a>
-                    /
-                    <a href="https://pex.jp/" target="_blank">PeX</a>
-
+                <div id="google_area">
+                    <!-- うまくいかない
+                        <script async src="https://cse.google.com/cse.js?cx=3659d8c67404c4e66">
+                        </script>
+                        <div class="gcse-search"></div>
+                        -->
+                    <details id="details_google_service">
+                        <summary>Googleサービス</summary>
+                        <a href="https://gemini.google.com/app?hl=ja" target="_blank">Gemini</a>
+                        <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">Gmail</a>
+                        <a href="https://drive.google.com/drive/my-drive" target="_blank">Drive</a>
+                        <a href="https://docs.google.com/document/u/0/" target="_blank">ドキュメント</a>
+                        <a href="https://docs.google.com/spreadsheets/u/0/" target="_blank">シート</a>
+                    </details>
                 </div>
 
-                <iframe src="https://huonchan.github.io/rakuten_point_mall_time_shift/" width="600"
-                    height="750"></iframe>
+                <div id="poi_katsu_area">
+
+                    <details id="details_enquete">
+                        <summary>アンケート</summary>
+                        <iframe src="p_life_enquete.htm" width="600" height="150"></iframe>
+                    </details>
+
+                    <details id="details_quiz">
+                        <summary>クイズ</summary>
+                        <iframe src="p_life_quiz.htm" width="600" height="300"></iframe>
+                    </details>
+
+                    <details id="details_others">
+                        <summary>その他</summary>
+                        <div id="bank">
+                            銀行:
+                            <a href="https://d-money.jp/" target="_blank">ドットマネー</a>
+                            /
+                            <a href="https://pex.jp/" target="_blank">PeX</a>
+                        </div>
+                    </details>
+
+                    <details id="details_rakuten">
+                        <summary>楽天系</summary>
+                        <a href="https://www.infoseek.co.jp/mission/list/" target="_blank'">infoseekへ</a>
+                        <details id="details_rakuten_point_mall">
+                            <summary>楽天モール</summary>
+                            <iframe src="https://huonchan.github.io/rakuten_point_mall_time_shift/" width="600"
+                                height="750"></iframe>
+                        </details>
+
+                        <div id="rakuten_kuzi_area">
+
+                            <div id="rakuten_kuzi_all">dummy</div>
+
+                            <script>
+
+                                const urls_m = new Map();
+                                urls_m.set("楽天ラッキーくじ", "https://kuji.rakuten.co.jp/f3a3832d0c");
+                                urls_m.set("楽天トラベル ラッキーくじ", "https://kuji.rakuten.co.jp/1243541a35");
+                                urls_m.set("楽天証券ラッキーかぶくじ", "https://kuji.rakuten.co.jp/6e7329f994");
+                                urls_m.set("楽天保険 保険の比較 くじ ", "https://kuji.rakuten.co.jp/14d330d3e0");
+                                urls_m.set("楽天TV ラッキーくじ", "https://kuji.rakuten.co.jp/46211bf9dd");
+                                urls_m.set("楽天不動産 ラッキーくじ", "https://kuji.rakuten.co.jp/18584163d");
+                                urls_m.set("楽天PAY(オンライン決済）ラッキーくじ", "https://kuji.rakuten.co.jp/7393386d27");
+                                urls_m.set("楽天Web検索 ラッキーくじ", "https://kuji.rakuten.co.jp/4351057845");
+                                urls_m.set("楽天ブックス ラッキーくじ", "https://kuji.rakuten.co.jp/ef23be45f7");
+                                urls_m.set("楽天ブックス(Faithbook)ラッキーくじ", "https://kuji.rakuten.co.jp/42136c5d7d");
+                                urls_m.set("楽天カレンダーラッキーくじ", "https://kuji.rakuten.co.jp/9ea32a8dfa");
+                                urls_m.set("楽天カレンダーラッキーくじ2", "https://kuji.rakuten.co.jp/34e2cb79fa");
+                                urls_m.set("楽天ブログ ラッキーくじ", "https://kuji.rakuten.co.jp/c8437c01c5/");
+                                urls_m.set("楽天レシピ ラッキーくじ", "https://kuji.rakuten.co.jp/26d37b04b2");
+                                urls_m.set("楽天Edy ラッキーくじ", "https://kuji.rakuten.co.jp/38c3861fdc");
+                                urls_m.set("ニュース ラッキーくじ", "https://kuji.rakuten.co.jp/c5337832c5");
+                                urls_m.set("楽天ラクマのラッキーくじ", "https://kuji.rakuten.co.jp/26e390eccf");
+                                urls_m.set("楽天シニアのラッキーくじ", "https://kuji.rakuten.co.jp/5f93b1fd01");
+                                urls_m.set("楽天Play ラッキーくじ", "https://kuji.rakuten.co.jp/1993dd09b6");
+                                urls_m.set("楽天ぐるなびラッキーくじ", "https://kuji.rakuten.co.jp/0293c43591");
+                                urls_m.set("infoseekくじ ", "https://kuji.rakuten.co.jp/889373540e");
+
+                                var rakuten_kuzi_all_html = ``
+
+                                urls_m.forEach((value, key) => {
+                                    rakuten_kuzi_all_html +=
+                                        `<li><a href="${value}" target="_brank"> ${key}</a></li>`;
+                                });
+
+                                document.getElementById('rakuten_kuzi_all').innerHTML = `<details>
+                                    <summary>楽天くじ</summary>
+                                     <div><a href="https://kuji.rakuten.co.jp/c8437c01c5/" target="_blank'">楽天くじ ログイン確認用</a></div>
+                                    <div id="rakuten_kuzi" style="color: #0000ee; text-decoration: underline;">
+                                                                楽天くじ全部開く</div>
+                                    ${rakuten_kuzi_all_html}
+                                </details>`;
+
+                                // 楽天くじ全部開く
+                                document.getElementById('rakuten_kuzi').onclick = async function () {
+                                    const isConfirmed = confirm("先にログイン確認用リンクでログイン状態確認とログイン処理しろ\n楽天くじ１５タブぐらい、マジで開くぞ？ｗ\nほんまにええんか？ｗ\nめんどくせー事になってもワイは知らんぞ？ｗ");
+                                    if (isConfirmed) {
+
+                                        for (const [key, value] of urls_m) {
+                                            window.open(value, '_blank');
+                                            await sleep(500);
+                                        }
+
+                                    } else {
+                                        // キャンセルされた場合の処理（必要であれば）
+                                        alert("キャンセルされました。");
+                                    }
+                                    return false;
+                                }
+
+                            </script>
+
+                        </div>
+                    </details>
+
+
+
+                </div>
 
             </div>
 
@@ -141,6 +254,36 @@
                 }
             }
             dummy_counter();
+
+        </script>
+
+        <script>
+            function initialize() {
+
+                const details =
+                    [
+                        "google_service",
+                        "quiz",
+                        "enquete",
+                        "others",
+                        "rakuten",
+                        "rakuten_point_mall"
+                    ]
+
+                for (const detail of details) {
+                    const d = document.getElementById(`details_${detail}`);
+                    d.addEventListener("toggle", function (event) {
+                        //document.getElementById("log").innerText = d.open;
+                        localStorage.setItem(`details_${detail}_visible`, d.open);
+                    });
+                    const b = localStorage.getItem(`details_${detail}_visible`);
+                    if (b === "true") {
+                        d.setAttribute("open", "");
+                    }
+                }
+            }
+
+            initialize();
 
         </script>
 
