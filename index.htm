@@ -8,6 +8,34 @@
 </head>
 
 <style>
+    #title {
+        display: flex;
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    #title>.text {
+        font-size: 32px;
+    }
+
+    .text.light_pink {
+        color: pink;
+    }
+
+    .text.pink {
+        color: indianred;
+    }
+
+    .text.sky_blue {
+        color: dodgerblue;
+    }
+
+
+    .text.yellow {
+        color: yellow;
+    }
+
+
     #header {
         display: flex;
         width: 500px;
@@ -70,15 +98,23 @@
 
             <div id="kari">
                 <!-- このへんネタ-->
-                <marquee>ようこそ！プリンセスおひめさまのホームページへ！　　　　　　　　なんで来たのお前？ｗ</marquee>
 
-                <div id="dummy_counter"></div>
+                <div id="title">
+                    <div class="text light_pink">ぷりんせす</div>
+                    <div class="text pink">❤</div>
+                    <div class="text sky_blue">さてぃあん</div>
+                    <div class="text yellow">★</div>
+                </div>
 
                 <a href="#" onclick="change_top_image()">
                     <img id="top_image" src="./images/top/0.jpg" title="何が気になるんだ？">
                 </a>
 
                 <div>TOP画提供：城ヶ崎姫子 様</div>
+
+                <marquee>ようこそ！プリンセスおひめさまのホームページへ！褒美にオプーナを買う権利をやろう！</marquee>
+
+                <div id="dummy_counter"></div>
 
                 <!--
                 <div>
@@ -92,7 +128,39 @@
 
                 -->
 
+                <div>
+                    更新履歴<br>
+                    2024/10/27：冷やし中華、滅びました<br>
+                    1990/11/27：生まれてこないほうが良かった。存在してしまう事の害悪
+                </div>
+
+                <div> 注意書き / 管理人 / 日記 / 
+                    <a href="https://www.aozora.gr.jp/cards/000035/files/301_14912.html">小説</a> /
+                    <a href="./bbs.htm">掲示板</a> / お絵かき掲示板 / リンク集</div>
+
+                <input type="text" id="command_text_box">
+                <button onclick="sendCommand()">Command送信</button>
                 <div id="log"> log...</div>
+
+                <script>
+                    function sendCommand() {
+                      const textbox = document.getElementById("command_text_box");
+                      const text = textbox.value; 
+                      // 入力されたテキストをJavaScript側で処理
+                      switch( text ) 
+                      {
+                        case "all delete":
+                        {
+                            localStorage.clear();
+                            document.getElementById("log").innerText = `ローカルデータ全部削除完了`
+                        }break;
+                        default:
+                        {
+                            document.getElementById("log").innerText = `${text} < とかいうコマンドねーよ`;
+                        }
+                      }
+                    }
+                  </script>
 
             </div>
 
@@ -116,74 +184,92 @@
                     </details>
                 </div>
 
+                <div id="satyam_list_are">
+                    <details id="details_satyam">
+                        <summary>サティアン一覧</summary>
+                        <a href="https://x.com/princess072101" target="_blank" title="姫殺すと 姫子LOST">アウシュX強制収容所(ヒメコロスト8回目)</a> <br>
+                        <a href="https://scrapbox.io/princess-room/" target="_blank">cosence(旧:scrapbox)サティアン</a> <br>
+                        <a href="https://note.com/notes" target="_blank">noteサティアン</a><br>
+                        <a href="https://zawazawa.jp/princess01/" target="_blank">zawazawaサティアン</a><br>
+                        <a href="https://www.pinterest.jp/princess_ohimesama/" target="_blank">pintarestサティアン</a><br>
+                        <a href="https://www.youtube.com/@princess_ohimesama" target="_blank">youtubeサティアン</a><br>
+                        <a href="https://github.com/huonchan" target="_blank">githubサティアン</a><br>
+                        <a href="https://misskey.io/@princess_ohimesama" target="_blank">misskeyサティアン</a>
+                    </details>
+
+                </div>
+
                 <div id="poi_katsu_area">
 
-                    <details id="details_enquete">
-                        <summary>アンケート</summary>
-                        <iframe src="p_life_enquete.htm" width="600" height="150"></iframe>
-                    </details>
+                    <details id="details_poi_katsu">
+                        <summary>ポイ活系</summary>
 
-                    <details id="details_quiz">
-                        <summary>クイズ</summary>
-                        <iframe src="p_life_quiz.htm" width="600" height="300"></iframe>
-                    </details>
-
-                    <details id="details_others">
-                        <summary>その他</summary>
-                        <div id="bank">
-                            銀行:
-                            <a href="https://d-money.jp/" target="_blank">ドットマネー</a>
-                            /
-                            <a href="https://pex.jp/" target="_blank">PeX</a>
-                        </div>
-                    </details>
-
-                    <details id="details_rakuten">
-                        <summary>楽天系</summary>
-                        <a href="https://www.infoseek.co.jp/mission/list/" target="_blank'">infoseekへ</a>
-                        <details id="details_rakuten_point_mall">
-                            <summary>楽天モール</summary>
-                            <iframe src="https://huonchan.github.io/rakuten_point_mall_time_shift/" width="600"
-                                height="750"></iframe>
+                        <details id="details_enquete">
+                            <summary>アンケート</summary>
+                            <iframe src="p_life_enquete.htm" width="600" height="150"></iframe>
                         </details>
 
-                        <div id="rakuten_kuzi_area">
+                        <details id="details_quiz">
+                            <summary>クイズ</summary>
+                            <iframe src="p_life_quiz.htm" width="600" height="300"></iframe>
+                        </details>
 
-                            <div id="rakuten_kuzi_all">dummy</div>
+                        <details id="details_others">
+                            <summary>その他</summary>
+                            <div id="bank">
+                                銀行:
+                                <a href="https://d-money.jp/" target="_blank">ドットマネー</a>
+                                /
+                                <a href="https://pex.jp/" target="_blank">PeX</a>
+                            </div>
+                        </details>
 
-                            <script>
+                        <details id="details_rakuten">
+                            <summary>楽天系</summary>
+                            <a href="https://www.infoseek.co.jp/mission/list/" target="_blank'">infoseekへ</a>
+                            <details id="details_rakuten_point_mall">
+                                <summary>楽天モール</summary>
+                                <iframe src="https://huonchan.github.io/rakuten_point_mall_time_shift/" width="600"
+                                    height="750"></iframe>
+                            </details>
 
-                                const urls_m = new Map();
-                                urls_m.set("楽天ラッキーくじ", "https://kuji.rakuten.co.jp/f3a3832d0c");
-                                urls_m.set("楽天トラベル ラッキーくじ", "https://kuji.rakuten.co.jp/1243541a35");
-                                urls_m.set("楽天証券ラッキーかぶくじ", "https://kuji.rakuten.co.jp/6e7329f994");
-                                urls_m.set("楽天保険 保険の比較 くじ ", "https://kuji.rakuten.co.jp/14d330d3e0");
-                                urls_m.set("楽天TV ラッキーくじ", "https://kuji.rakuten.co.jp/46211bf9dd");
-                                urls_m.set("楽天不動産 ラッキーくじ", "https://kuji.rakuten.co.jp/18584163d");
-                                urls_m.set("楽天PAY(オンライン決済）ラッキーくじ", "https://kuji.rakuten.co.jp/7393386d27");
-                                urls_m.set("楽天Web検索 ラッキーくじ", "https://kuji.rakuten.co.jp/4351057845");
-                                urls_m.set("楽天ブックス ラッキーくじ", "https://kuji.rakuten.co.jp/ef23be45f7");
-                                urls_m.set("楽天ブックス(Faithbook)ラッキーくじ", "https://kuji.rakuten.co.jp/42136c5d7d");
-                                urls_m.set("楽天カレンダーラッキーくじ", "https://kuji.rakuten.co.jp/9ea32a8dfa");
-                                urls_m.set("楽天カレンダーラッキーくじ2", "https://kuji.rakuten.co.jp/34e2cb79fa");
-                                urls_m.set("楽天ブログ ラッキーくじ", "https://kuji.rakuten.co.jp/c8437c01c5/");
-                                urls_m.set("楽天レシピ ラッキーくじ", "https://kuji.rakuten.co.jp/26d37b04b2");
-                                urls_m.set("楽天Edy ラッキーくじ", "https://kuji.rakuten.co.jp/38c3861fdc");
-                                urls_m.set("ニュース ラッキーくじ", "https://kuji.rakuten.co.jp/c5337832c5");
-                                urls_m.set("楽天ラクマのラッキーくじ", "https://kuji.rakuten.co.jp/26e390eccf");
-                                urls_m.set("楽天シニアのラッキーくじ", "https://kuji.rakuten.co.jp/5f93b1fd01");
-                                urls_m.set("楽天Play ラッキーくじ", "https://kuji.rakuten.co.jp/1993dd09b6");
-                                urls_m.set("楽天ぐるなびラッキーくじ", "https://kuji.rakuten.co.jp/0293c43591");
-                                urls_m.set("infoseekくじ ", "https://kuji.rakuten.co.jp/889373540e");
+                            <div id="rakuten_kuzi_area">
 
-                                var rakuten_kuzi_all_html = ``
+                                <div id="rakuten_kuzi_all">dummy</div>
 
-                                urls_m.forEach((value, key) => {
-                                    rakuten_kuzi_all_html +=
-                                        `<li><a href="${value}" target="_brank"> ${key}</a></li>`;
-                                });
+                                <script>
 
-                                document.getElementById('rakuten_kuzi_all').innerHTML = `<details>
+                                    const urls_m = new Map();
+                                    urls_m.set("楽天ラッキーくじ", "https://kuji.rakuten.co.jp/f3a3832d0c");
+                                    urls_m.set("楽天トラベル ラッキーくじ", "https://kuji.rakuten.co.jp/1243541a35");
+                                    urls_m.set("楽天証券ラッキーかぶくじ", "https://kuji.rakuten.co.jp/6e7329f994");
+                                    urls_m.set("楽天保険 保険の比較 くじ ", "https://kuji.rakuten.co.jp/14d330d3e0");
+                                    urls_m.set("楽天TV ラッキーくじ", "https://kuji.rakuten.co.jp/46211bf9dd");
+                                    urls_m.set("楽天不動産 ラッキーくじ", "https://kuji.rakuten.co.jp/18584163d");
+                                    urls_m.set("楽天PAY(オンライン決済）ラッキーくじ", "https://kuji.rakuten.co.jp/7393386d27");
+                                    urls_m.set("楽天Web検索 ラッキーくじ", "https://kuji.rakuten.co.jp/4351057845");
+                                    urls_m.set("楽天ブックス ラッキーくじ", "https://kuji.rakuten.co.jp/ef23be45f7");
+                                    urls_m.set("楽天ブックス(Faithbook)ラッキーくじ", "https://kuji.rakuten.co.jp/42136c5d7d");
+                                    urls_m.set("楽天カレンダーラッキーくじ", "https://kuji.rakuten.co.jp/9ea32a8dfa");
+                                    urls_m.set("楽天カレンダーラッキーくじ2", "https://kuji.rakuten.co.jp/34e2cb79fa");
+                                    urls_m.set("楽天ブログ ラッキーくじ", "https://kuji.rakuten.co.jp/c8437c01c5/");
+                                    urls_m.set("楽天レシピ ラッキーくじ", "https://kuji.rakuten.co.jp/26d37b04b2");
+                                    urls_m.set("楽天Edy ラッキーくじ", "https://kuji.rakuten.co.jp/38c3861fdc");
+                                    urls_m.set("ニュース ラッキーくじ", "https://kuji.rakuten.co.jp/c5337832c5");
+                                    urls_m.set("楽天ラクマのラッキーくじ", "https://kuji.rakuten.co.jp/26e390eccf");
+                                    urls_m.set("楽天シニアのラッキーくじ", "https://kuji.rakuten.co.jp/5f93b1fd01");
+                                    urls_m.set("楽天Play ラッキーくじ", "https://kuji.rakuten.co.jp/1993dd09b6");
+                                    urls_m.set("楽天ぐるなびラッキーくじ", "https://kuji.rakuten.co.jp/0293c43591");
+                                    urls_m.set("infoseekくじ ", "https://kuji.rakuten.co.jp/889373540e");
+
+                                    var rakuten_kuzi_all_html = ``
+
+                                    urls_m.forEach((value, key) => {
+                                        rakuten_kuzi_all_html +=
+                                            `<li><a href="${value}" target="_brank"> ${key}</a></li>`;
+                                    });
+
+                                    document.getElementById('rakuten_kuzi_all').innerHTML = `<details>
                                     <summary>楽天くじ</summary>
                                      <div><a href="https://kuji.rakuten.co.jp/c8437c01c5/" target="_blank'">楽天くじ ログイン確認用</a></div>
                                     <div id="rakuten_kuzi" style="color: #0000ee; text-decoration: underline;">
@@ -191,26 +277,29 @@
                                     ${rakuten_kuzi_all_html}
                                 </details>`;
 
-                                // 楽天くじ全部開く
-                                document.getElementById('rakuten_kuzi').onclick = async function () {
-                                    const isConfirmed = confirm("先にログイン確認用リンクでログイン状態確認とログイン処理しろ\n楽天くじ１５タブぐらい、マジで開くぞ？ｗ\nほんまにええんか？ｗ\nめんどくせー事になってもワイは知らんぞ？ｗ");
-                                    if (isConfirmed) {
+                                    // 楽天くじ全部開く
+                                    document.getElementById('rakuten_kuzi').onclick = async function () {
+                                        const isConfirmed = confirm("先にログイン確認用リンクでログイン状態確認とログイン処理しろ\n楽天くじ１５タブぐらい、マジで開くぞ？ｗ\nほんまにええんか？ｗ\nめんどくせー事になってもワイは知らんぞ？ｗ");
+                                        if (isConfirmed) {
 
-                                        for (const [key, value] of urls_m) {
-                                            window.open(value, '_blank');
-                                            await sleep(500);
+                                            for (const [key, value] of urls_m) {
+                                                window.open(value, '_blank');
+                                                await sleep(500);
+                                            }
+
+                                        } else {
+                                            // キャンセルされた場合の処理（必要であれば）
+                                            alert("キャンセルされました。");
                                         }
-
-                                    } else {
-                                        // キャンセルされた場合の処理（必要であれば）
-                                        alert("キャンセルされました。");
+                                        return false;
                                     }
-                                    return false;
-                                }
 
-                            </script>
+                                </script>
 
-                        </div>
+                            </div>
+                        </details>
+
+
                     </details>
 
 
@@ -236,24 +325,7 @@
                 document.getElementById("top_image").src = `./images/top/${array[rIdx]}`;
             }
 
-            function dummy_counter() {
-                const randomNumber = Math.floor(Math.random() * 10000);
 
-                // 下2桁が00ならキリ番
-                if (randomNumber % 100 === 0) {
-                    document.getElementById('dummy_counter').innerText = "キリ番ゲット！ " + randomNumber + "ふみ逃げ禁止　掲示板に報告お願いします";
-                } else {
-                    // キリ番じゃない場合は、適当なメッセージを表示
-                    const messages = [
-                        "残念！キリ番ではありませんでした…",
-                        "もう少しでキリ番！",
-                        "また挑戦してね！",
-                    ];
-                    const randomIndex = Math.floor(Math.random() * messages.length);
-                    document.getElementById('dummy_counter').innerText = "あなたは" + randomNumber + "人目のお客様です";
-                }
-            }
-            dummy_counter();
 
         </script>
 
@@ -263,6 +335,8 @@
                 const details =
                     [
                         "google_service",
+                        "satyam",
+                        "poi_katsu",
                         "quiz",
                         "enquete",
                         "others",
@@ -281,6 +355,22 @@
                         d.setAttribute("open", "");
                     }
                 }
+
+                var c = localStorage.getItem(`counter`);
+                if(c===null)
+                {
+                    c=0;
+                }
+                c = parseInt(c);
+                c+=1;
+                if (c % 100 === 0) {
+                    document.getElementById('dummy_counter').innerText = `キリ番ゲット！ ${c} ふみ逃げ禁止　掲示板に報告お願いします`;
+                } else {
+
+                    document.getElementById('dummy_counter').innerText = `あなたは ${c} 人目のお客様です`;
+                }
+                localStorage.setItem(`counter`, c );
+
             }
 
             initialize();
@@ -289,7 +379,5 @@
 
     </div>
 </body>
-
-
 
 </html>
