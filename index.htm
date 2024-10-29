@@ -75,6 +75,10 @@
     .enquete_line {
         display: flex;
     }
+
+    details>details {
+        margin: 0px 0px 0px 12px;
+    }
 </style>
 
 <script>
@@ -135,9 +139,10 @@
                     1990/11/27：生まれてこないほうが良かった。存在してしまう事の害悪
                 </div>
 
-                <div> 注意書き / 管理人 / 日記 / 
+                <div> 注意書き / 管理人 / 日記 /
                     <a href="https://www.aozora.gr.jp/cards/000035/files/301_14912.html">小説</a> /
-                    <a href="./bbs.htm">掲示板</a> / お絵かき掲示板 / リンク集</div>
+                    <a href="./bbs.htm">掲示板</a> / お絵かき掲示板 / リンク集
+                </div>
 
                 <input type="text" id="command_text_box">
                 <button onclick="sendCommand()">Command送信</button>
@@ -145,23 +150,34 @@
 
                 <script>
                     function sendCommand() {
-                      const textbox = document.getElementById("command_text_box");
-                      const text = textbox.value; 
-                      // 入力されたテキストをJavaScript側で処理
-                      switch( text ) 
-                      {
-                        case "all delete":
-                        {
-                            localStorage.clear();
-                            document.getElementById("log").innerText = `ローカルデータ全部削除完了`
-                        }break;
-                        default:
-                        {
-                            document.getElementById("log").innerText = `${text} < とかいうコマンドねーよ`;
+                        const textbox = document.getElementById("command_text_box");
+                        const text = textbox.value;
+                        // 入力されたテキストをJavaScript側で処理
+                        switch (text) {
+                            case "all delete":
+                                {
+                                    localStorage.clear();
+                                    document.getElementById("log").innerText = `ローカルデータ全部削除完了`
+                                } break;
+                            default:
+                                {
+                                    document.getElementById("log").innerText = `${text} < とかいうコマンドねーよ`;
+                                }
                         }
-                      }
                     }
-                  </script>
+                </script>
+
+
+                <div id="ww_c2b743d91e0ba" v='1.3' loc='auto'
+                    a='{"t":"horizontal","lang":"ja","sl_lpl":1,"ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>
+                    More forecasts:
+                    <a href="https://oneweather.org/ja/tokyo/10_days/" id="ww_c2b743d91e0ba_u" target="_blank">東京 天気
+                        10日間</a>
+                </div>
+                <script async src="https://app2.weatherwidget.org/js/?id=ww_c2b743d91e0ba"></script>
+
+                <p><a href="https://www.windy.com/?33.869,130.870,5" target="_blank'">風速</a></p>
+
 
             </div>
 
@@ -185,10 +201,12 @@
                     </details>
                 </div>
 
-                <div id="satyam_list_are">
+                <div id="satyam_list_area">
                     <details id="details_satyam">
                         <summary>サティアン一覧</summary>
-                        <a href="https://x.com/princess072101" target="_blank" title="姫殺すと 姫子LOST">アウシュX強制収容所(ヒメコロスト8回目)</a> <br>
+                        <a href="https://x.com/princess072101" target="_blank"
+                            title="姫殺すと 姫子LOST">アウシュX強制収容所(ヒメコロスト8回目)</a> <br>
+                        <a href="https://mstdn.jp/@princess114514" target="_blank">Mastodonサティアン</a>
                         <a href="https://scrapbox.io/princess-room/" target="_blank">cosence(旧:scrapbox)サティアン</a> <br>
                         <a href="https://note.com/notes" target="_blank">noteサティアン</a><br>
                         <a href="https://zawazawa.jp/princess01/" target="_blank">zawazawaサティアン</a><br>
@@ -196,6 +214,24 @@
                         <a href="https://www.youtube.com/@princess_ohimesama" target="_blank">youtubeサティアン</a><br>
                         <a href="https://github.com/huonchan" target="_blank">githubサティアン</a><br>
                         <a href="https://misskey.io/@princess_ohimesama" target="_blank">misskeyサティアン</a>
+                    </details>
+
+                </div>
+
+
+                <div id="my_tools_area">
+                    <details id="details_my_tools">
+                        <summary>自作物</summary>
+                        <a href="https://huonchan.github.io/text_changer/" target="_blank">テキストコンバーター</a>
+                        <a href="https://huonchan.github.io/poi-katsu_tracker/" target="_blank">ポイ活Tracker</a>
+                    </details>
+
+                </div>
+
+                <div id="mibunrui">
+                    <details id="details_mibunrui">
+                        <summary>未分類</summary>
+                        <a href="https://p-b-a.jp/" target="_blank">POBA</a>
                     </details>
 
                 </div>
@@ -358,19 +394,18 @@
                 }
 
                 var c = localStorage.getItem(`counter`);
-                if(c===null)
-                {
-                    c=0;
+                if (c === null) {
+                    c = 0;
                 }
                 c = parseInt(c);
-                c+=1;
+                c += 1;
                 if (c % 100 === 0) {
                     document.getElementById('dummy_counter').innerText = `キリ番ゲット！ ${c} ふみ逃げ禁止　掲示板に報告お願いします`;
                 } else {
 
                     document.getElementById('dummy_counter').innerText = `あなたは ${c} 人目のお客様です`;
                 }
-                localStorage.setItem(`counter`, c );
+                localStorage.setItem(`counter`, c);
 
             }
 
